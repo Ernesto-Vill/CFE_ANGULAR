@@ -1,37 +1,22 @@
-<div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-</div>
+
+<div class="container">
+
+
+
 <table class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Folio</th>
       <th scope="col">No. de Orden</th>
-      <th scope="col">Cliente</th>
-      <th scope="col">Accion</th>
+
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+    <tr *ngFor="let orden of ordenes">
+      <td>{{ orden.idOrd }}</td>
+      <td>{{ orden.noOrd }}</td>
+
     </tr>
   </tbody>
 </table>
+</div>  
