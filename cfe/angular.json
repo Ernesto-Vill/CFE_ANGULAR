@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cfe"
+    }
+  },
+  "defaultProject": "cfe",
+  "cli": {
+    "analytics": false
+  }
 }
