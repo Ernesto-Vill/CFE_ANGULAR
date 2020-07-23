@@ -20,6 +20,7 @@ const routes: Routes = [
   {path:'orden',component:OrdenComponent},
   {path:'material',component:MaterialComponent},
   {path:'usuario',component:UsuarioComponent},
+  {path:'cliente',component:ClienteComponent},
 ]
 @NgModule({
   declarations: [
