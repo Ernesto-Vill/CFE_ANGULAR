@@ -13,9 +13,6 @@ import { MaterialComponent } from './material/material.component';
 import{RouterModule,Routes} from '@angular/router';
 import { UsuarioComponent } from './usuario/usuario.component'
 
-
-
-
 const routes: Routes = [
   {path: '',redirectTo:'/material',pathMatch:'full'},
   {path:'orden',component:OrdenComponent},

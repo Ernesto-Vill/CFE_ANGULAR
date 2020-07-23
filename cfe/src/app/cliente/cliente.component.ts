@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from './cliente';
+import { ClienteService } from './cliente.service';
+import Swal from 'sweetalert2/src/sweetalert2.js'
 
 @Component({
   selector: 'app-cliente',
   templateUrl: './cliente.component.html',
-  styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent implements OnInit {
+  clientes:Cliente[];
 
-  constructor() { }
+  constructor(private clienteService: ClienteService) { }
 
-  ngOnInit(): void {
+  ngOnInit()  {
+    this.clienteService.getClientes().subscribe(
+      clientes => this.clientes = clientes
+    );
   }
 
 }

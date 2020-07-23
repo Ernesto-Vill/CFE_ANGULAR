@@ -1,1 +1,52 @@
-<p>cliente works!</p>
+<div class="container">
+  <form>
+    <div class="form-group row">
+
+      <div class="col-sm-2">
+        <button type="submit" class="btn btn-secondary">Buscar</button>
+      </div>
+      <div class="col-sm-10">
+        <input class="form-control" placeholder="Id Cliente o Nombre del clienete">
+      </div>
+    </div>
+
+  </form>
+</div>
+
+
+<div class="container">
+
+
+
+<table class="table">
+<thead class="thead-dark">
+<tr>
+  <th scope="col">Id Cliente</th>
+  <th scope="col">Apellido Paterno</th>
+  <th scope="col">Apellido Materno</th>
+  <th scope="col">Nombre</th>
+  <th soope="col">Telefono</th>
+  <th soope="col">e-mail</th>
+  <th soope="col"></th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let cliente of clientes">
+  <td>{{cliente.idClient}}</td>
+  <td>{{cliente.apPaClient}}</td>
+  <td>{{cliente.apMaClient}}</td>
+  <td>{{cliente.nomClient}}</td>
+  <td>{{cliente.telClient}}</td>
+  <td>{{cliente.emailClient}}</td>
+  <td>
+    <button>ver</button> <button>actualiza</button> <button>eliminar</button> </td>
+  </tr>
+
+  </tbody>
+</table>
+<div class="col-sm-2">
+  <button type="submit" class="btn btn-secondary">Agregar</button>
+</div>
+</div>

@@ -1,1 +1,48 @@
-<p>usuario works!</p>
+<div class="container">
+  <form>
+    <div class="form-group row">
+
+      <div class="col-sm-2">
+        <button type="submit" class="btn btn-secondary">Buscar</button>
+      </div>
+      <div class="col-sm-10">
+        <input class="form-control" placeholder="Id de usuario o Nombre de Usuario">
+      </div>
+    </div>
+
+  </form>
+</div>
+
+
+<div class="container">
+
+
+
+<table class="table">
+<thead class="thead-dark">
+<tr>
+  <th scope="col">Id Usuario</th>
+  <th scope="col">Apellido Paterno</th>
+  <th scope="col">Apellido Materno</th>
+  <th scope="col">Nombre</th>
+  <th soope="col"></th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let usuario of usuarios">
+  <td>{{usuario.idUsu}}</td>
+  <td>{{usuario.apPaUsu}}</td>
+  <td>{{usuario.apMaUsu}}</td>
+  <td>{{usuario.nomUsu}}</td>
+  <td>
+    <button>ver</button> <button>actualiza</button> <button>eliminar</button> </td>
+  </tr>
+
+  </tbody>
+</table>
+<div class="col-sm-2">
+  <button type="submit" class="btn btn-secondary">Agregar</button>
+</div>
+</div>
