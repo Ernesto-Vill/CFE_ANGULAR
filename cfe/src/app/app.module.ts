@@ -7,12 +7,14 @@ import { OrdenComponent } from './orden/orden.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrdenService } from './orden/orden.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ClienteComponent } from './cliente/cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrdenComponent,
-    NavbarComponent
+    NavbarComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule,
