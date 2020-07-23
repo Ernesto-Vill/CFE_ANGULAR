@@ -1,3 +1,18 @@
+    <div class="container">
+      <form>
+        <div class="form-group row">
+
+          <div class="col-sm-2">
+            <button type="submit" class="btn btn-secondary">Buscar</button>
+          </div>
+          <div class="col-sm-10">
+            <input class="form-control" placeholder="Folio">
+          </div>
+        </div>
+
+      </form>
+    </div>
+
 
 <div class="container">
 
@@ -8,6 +23,8 @@
     <tr>
       <th scope="col">Folio</th>
       <th scope="col">No. de Orden</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Acción</th>
 
     </tr>
   </thead>
@@ -15,8 +32,9 @@
     <tr *ngFor="let orden of ordenes">
       <td>{{ orden.idOrd }}</td>
       <td>{{ orden.noOrd }}</td>
-
+      <td>{{ orden.cliente.nomClient }}</td>
+      <td> <button>ver</button> <button>actualiza</button> <button>eliminar</button> </td>
     </tr>
   </tbody>
 </table>
-</div>  
+</div>

@@ -1,3 +1,6 @@
+import { Cliente } from'../cliente/cliente'
+
+
 export class Orden {
   idOrd:string;
   noOrd:string;
@@ -24,5 +27,5 @@ export class Orden {
   usuarioIdUsu:string;
   clienteIdClient:string;
   ubicacionIdUbi:number;
-
+  cliente:Cliente;
 }
