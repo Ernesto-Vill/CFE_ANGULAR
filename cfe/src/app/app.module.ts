@@ -7,17 +7,29 @@ import { OrdenComponent } from './orden/orden.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrdenService } from './orden/orden.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialComponent } from './material/material.component';
+import{RouterModule,Routes} from '@angular/router';
+import { UsuarioComponent } from './usuario/usuario.component'
 
+const routes: Routes = [
+  {path: '',redirectTo:'/material',pathMatch:'full'},
+  {path:'orden',component:OrdenComponent},
+  {path:'material',component:MaterialComponent},
+  {path:'usuario',component:UsuarioComponent},
+]
 @NgModule({
   declarations: [
     AppComponent,
     OrdenComponent,
-    NavbarComponent
+    NavbarComponent,
+    MaterialComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [OrdenService],
   bootstrap: [AppComponent]
