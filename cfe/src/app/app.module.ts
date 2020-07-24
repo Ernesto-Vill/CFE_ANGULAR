@@ -11,7 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClienteComponent } from './cliente/cliente.component';
 import { MaterialComponent } from './material/material.component';
 import{RouterModule,Routes} from '@angular/router';
-import { UsuarioComponent } from './usuario/usuario.component'
+import { UsuarioComponent } from './usuario/usuario.component';
+import { ClienteformularioComponent } from './cliente/clienteformulario/clienteformulario.component'
 
 const routes: Routes = [
   {path: '',redirectTo:'/material',pathMatch:'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'material',component:MaterialComponent},
   {path:'usuario',component:UsuarioComponent},
   {path:'cliente',component:ClienteComponent},
+  {path:'clienteformulario',component:ClienteformularioComponent},
 ]
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ const routes: Routes = [
     NavbarComponent,
     ClienteComponent,
     MaterialComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    ClienteformularioComponent
   ],
   imports: [
     BrowserModule,
