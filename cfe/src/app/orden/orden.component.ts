@@ -19,9 +19,9 @@ export class OrdenComponent implements OnInit {
   }
 
   delete(orden: Orden): void {
-    Swal({
+    Swal.fire({
       title: 'Está seguro?',
-      text: `¿Seguro que desea eliminar al orden ${orden.idOrd} ${orden.noOrd}?`,
+      text: `¿Seguro que desea eliminar al orden?`,
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -35,16 +35,16 @@ export class OrdenComponent implements OnInit {
     }).then((result) => {
       if (result.value) {
 
-      //  this.ordenService.delete(orden.id).subscribe(
-      //    response => {
-        //    this.ordenes = this.ordenes.filter(cli => cli !== orden)
-          //  Swal(
-            //  'Orden Eliminado!',
-            //  `Orden ${orden.idOrd} eliminado con éxito.`,
-            //  'success'
-            //)
-          //}
-        //)
+       this.ordenService.delete(orden.idOrd).subscribe(
+          response => {
+            this.ordenes = this.ordenes.filter(cli => cli !== orden)
+            Swal.fire(
+              'Orden Eliminado!',
+              `Orden ${orden.idOrd} eliminado con éxito.`,
+              'success'
+            )
+          }
+        )
 
       }
     })

@@ -22,19 +22,19 @@ export class OrdenService {
       map(response => response as Orden[])
     );
   }
-/*your code here create(orden: Orden) : Observable<Orden> {
+ create(orden: Orden) : Observable<Orden> {
     return this.http.post<Orden>(this.urlEndPoint, orden, {headers: this.httpHeaders})
   }
 
-  getCliente(id): Observable<Orden>{
+  getOrden(id): Observable<Orden>{
     return this.http.get<Orden>(`${this.urlEndPoint}/${id}`)
   }
 
   update(orden: Orden): Observable<Orden>{
-    return this.http.put<Orden>(`${this.urlEndPoint}/${orden.id}`, orden, {headers: this.httpHeaders})
+    return this.http.put<Orden>(`${this.urlEndPoint}/${orden.idOrd}`, orden, {headers: this.httpHeaders})
   }
 
-  delete(id: number): Observable<Orden>{
+  delete(id:string): Observable<Orden>{
     return this.http.delete<Orden>(`${this.urlEndPoint}/${id}`, {headers: this.httpHeaders})
-  }*/
+  }
 }
