@@ -13,9 +13,40 @@ export class MaterialComponent implements OnInit {
   constructor(private materialService:MaterialService) { }
 
   ngOnInit(): void {
-    this.materialService.getMaterial().subscribe(
+    this.materialService.getMateriales().subscribe(
       materiales =>this.materiales=materiales
     );
   }
 
+  delete(material: Material): void {
+    Swal.fire({
+      title: 'Está seguro?',
+      text: `¿Seguro que desea eliminar al material?`,
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, eliminar!',
+      cancelButtonText: 'No, cancelar!',
+      confirmButtonClass: 'btn btn-success',
+      cancelButtonClass: 'btn btn-danger',
+      buttonsStyling: false,
+      reverseButtons: true
+    }).then((result) => {
+      if (result.value) {
+
+       this.materialService.delete(material.idMat).subscribe(
+          response => {
+            this.materiales = this.materiales.filter(cli => cli !== material)
+            Swal.fire(
+              'Material Eliminado!',
+              `Material ${material.idMat} eliminado con éxito.`,
+              'success'
+            )
+          }
+        )
+
+      }
+    })
+  }
 }

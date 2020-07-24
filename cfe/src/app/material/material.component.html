@@ -26,7 +26,7 @@
   <th scope="col">Nombre Material</th>
   <th scope="col">Unidad de Material</th>
   <th scope="col">Descripcion</th>
-  <th soope="col"></th>
+  <th soope="col">Acción</th>
 
 
 </tr>
@@ -38,7 +38,19 @@
   <td>{{material.uniMat}}</td>
   <td>{{material.descMat}}</td>
   <td>
-    <button>ver</button> <button>actualiza</button> <button>eliminar</button> </td>
+    <div class="btn-group dropright">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Más
+      </button>
+      <div class="dropdown-menu">
+        <ul class="list-group">
+          <li class="list-group-item"><a >Ver</a></li>
+          <li class="list-group-item"><a >Actualizar</a></li>
+          <li class="list-group-item" ><a (click)='delete(material)' >Eliminar</a></li>
+        </ul>
+      </div>
+    </div>
+  </td>
   </tr>
 
   </tbody>

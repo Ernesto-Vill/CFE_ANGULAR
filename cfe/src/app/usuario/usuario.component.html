@@ -25,7 +25,7 @@
   <th scope="col">Apellido Paterno</th>
   <th scope="col">Apellido Materno</th>
   <th scope="col">Nombre</th>
-  <th soope="col"></th>
+  <th soope="col">Acción</th>
 
 
 </tr>
@@ -37,7 +37,19 @@
   <td>{{usuario.apMaUsu}}</td>
   <td>{{usuario.nomUsu}}</td>
   <td>
-    <button>ver</button> <button>actualiza</button> <button>eliminar</button> </td>
+    <div class="btn-group dropright">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Más
+      </button>
+      <div class="dropdown-menu">
+        <ul class="list-group">
+          <li class="list-group-item"><a >Ver</a></li>
+          <li class="list-group-item"><a >Actualizar</a></li>
+          <li class="list-group-item" ><a (click)='delete(usuario)' >Eliminar</a></li>
+        </ul>
+      </div>
+    </div>
+  </td>
   </tr>
 
   </tbody>
