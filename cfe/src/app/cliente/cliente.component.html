@@ -27,7 +27,7 @@
   <th scope="col">Nombre</th>
   <th soope="col">Telefono</th>
   <th soope="col">e-mail</th>
-  <th soope="col"></th>
+  <th soope="col">Acción</th>
 
 
 </tr>
@@ -41,7 +41,20 @@
   <td>{{cliente.telClient}}</td>
   <td>{{cliente.emailClient}}</td>
   <td>
-    <button>ver</button> <button>actualiza</button> <button>eliminar</button> </td>
+    <!-- Default dropright button -->
+    <div class="btn-group dropright">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Más
+      </button>
+      <div class="dropdown-menu">
+        <ul class="list-group">
+          <li class="list-group-item"><a >Ver</a></li>
+          <li class="list-group-item"><a >Actualizar</a></li>
+          <li class="list-group-item" ><a (click)='delete(cliente)' >Eliminar</a></li>
+        </ul>
+      </div>
+    </div>
+  </td>
   </tr>
 
   </tbody>

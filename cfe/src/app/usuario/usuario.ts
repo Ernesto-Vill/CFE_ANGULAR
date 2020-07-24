@@ -1,5 +1,5 @@
 export class Usuario {
-  idUsu:number;
+  idUsu:String;
   userNameUsu:String;
   nomUsu:String;
   apPaUsu:String;

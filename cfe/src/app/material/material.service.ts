@@ -15,9 +15,25 @@ export class MaterialService {
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
   constructor(private http: HttpClient) { }
 
-  getMaterial(): Observable<Material[]> {
+  getMateriales(): Observable<Material[]> {
     return this.http.get(this.urlEndPoint).pipe(
       map(response => response as Material[])
     );
 }
+
+create(material: Material) : Observable<Material> {
+   return this.http.post<Material>(this.urlEndPoint, material, {headers: this.httpHeaders})
+ }
+
+ getMaterial(id): Observable<Material>{
+   return this.http.get<Material>(`${this.urlEndPoint}/${id}`)
+ }
+
+ update(material: Material): Observable<Material>{
+   return this.http.put<Material>(`${this.urlEndPoint}/${material.idMat}`, material, {headers: this.httpHeaders})
+ }
+
+ delete(id:number): Observable<Material>{
+   return this.http.delete<Material>(`${this.urlEndPoint}/${id}`, {headers: this.httpHeaders})
+ }
 }

@@ -34,18 +34,16 @@
       <td>{{ orden.noOrd }}</td>
       <td>{{ orden.cliente.nomClient }}</td>
       <td>
-        <div class="panel-group">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-                <a data-toggle="collapse" href="#collapse1">Accion</a>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse">
-              <ul class="list-group">
-                <li class="list-group-item"><a >Ver</a></li>
-                <li class="list-group-item"><a >Actualizar</a></li>
-                <li class="list-group-item" ><a (click)='delete(orden)' >Eliminar</a></li>
-              </ul>
-            </div>
+        <div class="btn-group dropright">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Más
+          </button>
+          <div class="dropdown-menu">
+            <ul class="list-group">
+              <li class="list-group-item"><a >Ver</a></li>
+              <li class="list-group-item"><a >Actualizar</a></li>
+              <li class="list-group-item" ><a (click)='delete(orden)' >Eliminar</a></li>
+            </ul>
           </div>
         </div>
         </td>
