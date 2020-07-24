@@ -12,7 +12,9 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { MaterialComponent } from './material/material.component';
 import{RouterModule,Routes} from '@angular/router';
 import { UsuarioComponent } from './usuario/usuario.component';
-import { ClienteformularioComponent } from './cliente/clienteformulario/clienteformulario.component'
+import { ClienteformularioComponent } from './cliente/clienteformulario/clienteformulario.component';
+import { MaterialformularioComponent } from './material/materialformulario/materialformulario.component';
+import { UsuarioformularioComponent } from './usuario/usuarioformulario/usuarioformulario.component'
 
 const routes: Routes = [
   {path: '',redirectTo:'/material',pathMatch:'full'},
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path:'usuario',component:UsuarioComponent},
   {path:'cliente',component:ClienteComponent},
   {path:'clienteformulario',component:ClienteformularioComponent},
+  {path:'materialformulario',component:MaterialformularioComponent},
+  {path:'usuarioformulario',component:UsuarioformularioComponent},
 ]
 @NgModule({
   declarations: [
@@ -30,7 +34,9 @@ const routes: Routes = [
     ClienteComponent,
     MaterialComponent,
     UsuarioComponent,
-    ClienteformularioComponent
+    ClienteformularioComponent,
+    MaterialformularioComponent,
+    UsuarioformularioComponent
   ],
   imports: [
     BrowserModule,
