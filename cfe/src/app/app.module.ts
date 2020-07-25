@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrdenComponent } from './orden/orden.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrdenService } from './orden/orden.service';
+import { ClienteService } from './cliente/cliente.service';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ClienteComponent } from './cliente/cliente.component';
@@ -22,7 +24,8 @@ const routes: Routes = [
   {path:'material',component:MaterialComponent},
   {path:'usuario',component:UsuarioComponent},
   {path:'cliente',component:ClienteComponent},
-  {path:'clienteformulario',component:ClienteformularioComponent},
+  {path:'cliente/formulario',component:ClienteformularioComponent},
+  {path:'cliente/formulario/:id',component:ClienteformularioComponent},
   {path:'materialformulario',component:MaterialformularioComponent},
   {path:'usuarioformulario',component:UsuarioformularioComponent},
 ]
@@ -42,9 +45,11 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [OrdenService],
+  providers: [OrdenService,
+              ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

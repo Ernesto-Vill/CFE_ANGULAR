@@ -49,7 +49,7 @@
       <div class="dropdown-menu">
         <ul class="list-group">
           <li class="list-group-item"><a >Ver</a></li>
-          <li class="list-group-item"><a >Actualizar</a></li>
+          <li class="list-group-item" [routerLink]="['/cliente/formulario', cliente.idClient]" ><a >Actualizar</a></li>
           <li class="list-group-item" ><a (click)='delete(cliente)' >Eliminar</a></li>
         </ul>
       </div>
@@ -59,5 +59,5 @@
 
   </tbody>
 </table>
-<button type="submit" class="btn btn-secondary" routerLink="/clienteformulario">Agregar</button>
+<button type="submit" class="btn btn-secondary" routerLink="/cliente/formulario">Agregar</button>
 </div>
