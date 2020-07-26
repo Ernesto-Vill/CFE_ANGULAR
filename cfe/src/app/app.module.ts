@@ -22,11 +22,14 @@ const routes: Routes = [
   {path: '',redirectTo:'/material',pathMatch:'full'},
   {path:'orden',component:OrdenComponent},
   {path:'material',component:MaterialComponent},
+  {path:'material/formulario',component:MaterialformularioComponent},
+  {path:'material/formulario/:id',component:MaterialformularioComponent},
   {path:'usuario',component:UsuarioComponent},
+  {path:'usuario/formulario',component:UsuarioformularioComponent},
+  {path:'usuario/formulario/:id',component:UsuarioformularioComponent},
   {path:'cliente',component:ClienteComponent},
   {path:'cliente/formulario',component:ClienteformularioComponent},
   {path:'cliente/formulario/:id',component:ClienteformularioComponent},
-  {path:'materialformulario',component:MaterialformularioComponent},
   {path:'usuarioformulario',component:UsuarioformularioComponent},
 ]
 @NgModule({

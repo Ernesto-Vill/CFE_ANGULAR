@@ -44,8 +44,7 @@
       </button>
       <div class="dropdown-menu">
         <ul class="list-group">
-          <li class="list-group-item"><a >Ver</a></li>
-          <li class="list-group-item"><a >Actualizar</a></li>
+          <li class="list-group-item" [routerLink]="['/material/formulario', material.idMat]"><a >Actualizar</a></li>
           <li class="list-group-item" ><a (click)='delete(material)' >Eliminar</a></li>
         </ul>
       </div>
@@ -55,5 +54,5 @@
 
   </tbody>
 </table>
-<button type="submit" class="btn btn-secondary" routerLink="/materialformulario">Agregar</button>
+<button type="submit" class="btn btn-secondary" routerLink="/material/formulario">Agregar</button>
 </div>
